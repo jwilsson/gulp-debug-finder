@@ -1,0 +1,24 @@
+{
+  "name": "gulp-debug-finder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jonathan Wilsson <jonathan.wilsson@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwilsson/gulp-debug-finder.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "debug"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "rocambole": "^0.7.0",
+    "through2": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/jwilsson/gulp-debug-finder/issues"
+  },
+  "license": "MIT"
+}
