@@ -17,8 +17,14 @@
     "rocambole": "^0.7.0",
     "through2": "^2.0.0"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "bugs": {
     "url": "https://github.com/jwilsson/gulp-debug-finder/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
 }
