@@ -22,22 +22,16 @@ module.exports = function () {
             contents = file.contents.toString();
 
             rocambole.moonwalk(contents, function (node) {
-                var expression;
-                var main;
+                var expression = node.callee || {};
+                var maybeIdent;
 
-                if (node.type !== 'CallExpression') {
+                if (node.type !== 'CallExpression' || expression.type !== 'MemberExpression') {
                     return;
                 }
 
-                expression = node.callee;
+                maybeIdent = expression.object || {};
 
-                if (expression && expression.type !== 'MemberExpression') {
-                    return;
-                }
-
-                main = expression.object;
-
-                if (main && main.type === 'Identifier' && main.name === 'console' && expression.property) {
+                if (maybeIdent.type === 'Identifier' && maybeIdent.name === 'console' && expression.property) {
                     out = 'There are JavaScript debug statements present.';
                 }
             });
