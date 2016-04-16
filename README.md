@@ -1,4 +1,6 @@
 # gulp-debug-finder
+[![npm](https://img.shields.io/npm/v/gulp-debug-finder.svg)](https://www.npmjs.com/package/gulp-debug-finder)
+
 Make sure `console.log()` statements doesn't make it into production.
 
 ## Install
