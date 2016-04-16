@@ -17,14 +17,16 @@
     "rocambole": "^0.7.0",
     "through2": "^2.0.0"
   },
+  "devDependencies": {
+    "eslint": "^2.8.0",
+    "mocha": "^2.3.3"
+  },
   "scripts": {
+    "pretest": "eslint *.js",
     "test": "mocha"
   },
   "bugs": {
     "url": "https://github.com/jwilsson/gulp-debug-finder/issues"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "^2.3.3"
-  }
+  "license": "MIT"
 }

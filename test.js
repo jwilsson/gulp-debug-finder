@@ -8,7 +8,7 @@ describe('gulp-debug-finder', function () {
     it('should warn when there are debug statements present', function (cb) {
         var stream = debugFinder();
 
-        stream.on('error', function (error) {
+        stream.on('error', function () {
             assert(true);
 
             cb();
