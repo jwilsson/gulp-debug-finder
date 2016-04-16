@@ -5,6 +5,8 @@
 Make sure `console.log()` statements doesn't make it into production.
 
 ## Install
+*Note: Node 4 or later is required.*
+
 ```bash
 npm install gulp-debug-finder --save-dev
 ```
