@@ -1,14 +1,14 @@
 'use strict';
 
-var gutil = require('gulp-util');
-var debugFinder = require('./');
-var assert = require('assert');
+const gutil = require('gulp-util');
+const debugFinder = require('./');
+const assert = require('assert');
 
-describe('gulp-debug-finder', function () {
-    it('should warn when there are debug statements present', function (cb) {
-        var stream = debugFinder();
+describe('gulp-debug-finder', () => {
+    it('should warn when there are debug statements present', (cb) => {
+        const stream = debugFinder();
 
-        stream.on('error', function () {
+        stream.on('error', () => {
             assert(true);
 
             cb();

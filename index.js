@@ -1,15 +1,13 @@
 'use strict';
 
-var rocambole = require('rocambole');
-var through = require('through2');
-var gutil = require('gulp-util');
+const rocambole = require('rocambole');
+const through = require('through2');
+const gutil = require('gulp-util');
 
-module.exports = function () {
-    var out = '';
+module.exports = () => {
+    let out = '';
 
-    return through.obj(function (file, enc, cb) {
-        var contents;
-
+    return through.obj((file, enc, cb) => {
         if (file.isNull()) {
             return cb(null, file);
         }
@@ -19,17 +17,16 @@ module.exports = function () {
         }
 
         try {
-            contents = file.contents.toString();
+            const contents = file.contents.toString();
 
-            rocambole.moonwalk(contents, function (node) {
-                var expression = node.callee || {};
-                var maybeIdent;
+            rocambole.moonwalk(contents, (node) => {
+                const expression = node.callee || {};
 
                 if (node.type !== 'CallExpression' || expression.type !== 'MemberExpression') {
                     return;
                 }
 
-                maybeIdent = expression.object || {};
+                const maybeIdent = expression.object || {};
 
                 if (maybeIdent.type === 'Identifier' && maybeIdent.name === 'console' && expression.property) {
                     out = 'There are JavaScript debug statements present.';
