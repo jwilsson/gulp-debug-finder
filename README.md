@@ -13,10 +13,10 @@ npm install gulp-debug-finder --save-dev
 
 ## Usage
 ```js
-var gulp = require('gulp');
-var debugFinder = require('gulp-debug-finder');
+const gulp = require('gulp');
+const debugFinder = require('gulp-debug-finder');
 
-gulp.task('default', function () {
+gulp.task('default', () => {
     return gulp.src('src/*.js')
         .pipe(debugFinder());
 });
