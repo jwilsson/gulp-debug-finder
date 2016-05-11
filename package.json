@@ -1,6 +1,7 @@
 {
   "name": "gulp-debug-finder",
   "version": "2.0.0",
+  "description": "Make sure console.log() statements doesn't make it into production.",
   "main": "index.js",
   "author": "Jonathan Wilsson <jonathan.wilsson@gmail.com>",
   "repository": {
