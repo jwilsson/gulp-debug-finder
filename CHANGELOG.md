@@ -1,4 +1,7 @@
 # Changelog
+## 2.0.1 (2016-05-11)
+* Added a proper description to `package.json`.
+
 ## 2.0.0 (2016-04-20)
 * Rewrote to ES2015.
 * Required Node version is now > 4.
