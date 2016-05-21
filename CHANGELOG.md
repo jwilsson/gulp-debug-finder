@@ -1,4 +1,8 @@
 # Changelog
+## 2.1.0 (2016-05-21)
+* Replaced `gulp-util` with smaller dependencies.
+* The `npm` package now only includes the relevant files.
+
 ## 2.0.1 (2016-05-11)
 * Added a proper description to `package.json`.
 
