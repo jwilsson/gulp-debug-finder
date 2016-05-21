@@ -1,8 +1,8 @@
 'use strict';
 
+const PluginError = require('plugin-error');
 const rocambole = require('rocambole');
 const through = require('through2');
-const gutil = require('gulp-util');
 
 module.exports = () => {
     let out = '';
@@ -13,7 +13,7 @@ module.exports = () => {
         }
 
         if (file.isStream()) {
-            return cb(new gutil.PluginError('gulp-debug-finder', 'Streaming not supported.'));
+            return cb(new PluginError('gulp-debug-finder', 'Streaming not supported.'));
         }
 
         try {
@@ -33,7 +33,7 @@ module.exports = () => {
                 }
             });
         } catch (e) {
-            this.emit('error', new gutil.PluginError('gulp-debug-finder', e, {
+            this.emit('error', new PluginError('gulp-debug-finder', e, {
                 fileName: file.path
             }));
         }
@@ -41,7 +41,7 @@ module.exports = () => {
         return cb();
     }, function (cb) {
         if (out) {
-            this.emit('error', new gutil.PluginError('gulp-debug-finder', out, {
+            this.emit('error', new PluginError('gulp-debug-finder', out, {
                 showStack: false
             }));
         }

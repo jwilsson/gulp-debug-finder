@@ -1,8 +1,8 @@
 'use strict';
 
-const gutil = require('gulp-util');
 const debugFinder = require('./');
 const assert = require('assert');
+const File = require('vinyl');
 
 describe('gulp-debug-finder', () => {
     it('should warn when there are debug statements present', (cb) => {
@@ -14,7 +14,7 @@ describe('gulp-debug-finder', () => {
             cb();
         });
 
-        stream.write(new gutil.File({
+        stream.write(new File({
             contents: new Buffer('if (true) { console.log("Hello world"); }')
         }));
 
