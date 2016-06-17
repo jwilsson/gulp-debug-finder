@@ -7,7 +7,7 @@ const through = require('through2');
 module.exports = () => {
     let out = '';
 
-    return through.obj((file, enc, cb) => {
+    return through.obj(function (file, enc, cb) {
         if (file.isNull()) {
             return cb(null, file);
         }
