@@ -1,4 +1,8 @@
 # Changelog
+## 2.1.1 (2016-06-17)
+* Fixed an issue where invalid JavaScript files would crash the plugin.
+* Updated ESLint config.
+
 ## 2.1.0 (2016-05-21)
 * Replaced `gulp-util` with smaller dependencies.
 * The `npm` package now only includes the relevant files.
