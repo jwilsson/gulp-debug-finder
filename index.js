@@ -7,7 +7,7 @@ const through = require('through2');
 module.exports = () => {
     let out = '';
 
-    return through.obj(function (file, enc, cb) {
+    return through.obj(function transform (file, enc, cb) {
         if (file.isNull()) {
             return cb(null, file);
         }
@@ -33,16 +33,18 @@ module.exports = () => {
                 }
             });
         } catch (e) {
+            // eslint-disable-next-line no-invalid-this
             this.emit('error', new PluginError('gulp-debug-finder', e, {
-                fileName: file.path
+                fileName: file.path,
             }));
         }
 
         return cb();
-    }, function (cb) {
+    }, function flush (cb) {
         if (out) {
+            // eslint-disable-next-line no-invalid-this
             this.emit('error', new PluginError('gulp-debug-finder', out, {
-                showStack: false
+                showStack: false,
             }));
         }
 
