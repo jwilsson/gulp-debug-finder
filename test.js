@@ -15,7 +15,7 @@ describe('gulp-debug-finder', () => {
         });
 
         stream.write(new File({
-            contents: new Buffer('if (true) { console.log("Hello world"); }'),
+            contents: new Buffer('if (true) { console.log("Hello world"); }'), // eslint-disable-line node/no-deprecated-api
         }));
 
         stream.end();
