@@ -22,10 +22,10 @@
     "through2": "^2.0.0"
   },
   "devDependencies": {
-    "eslint-config-jwilsson": "jwilsson/eslint-config",
     "eslint": "^3.0.0",
+    "eslint-config-jwilsson": "jwilsson/eslint-config",
     "mocha": "^3.0.0",
-    "vinyl": "^1.1.1"
+    "vinyl": "^2.0.0"
   },
   "scripts": {
     "pretest": "eslint *.js",
