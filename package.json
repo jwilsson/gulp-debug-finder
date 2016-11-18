@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/jwilsson/gulp-debug-finder.git"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "keywords": [
     "gulp",
     "gulpplugin",
