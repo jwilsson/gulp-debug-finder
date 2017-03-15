@@ -1,6 +1,7 @@
 # gulp-debug-finder
 [![npm](https://img.shields.io/npm/v/gulp-debug-finder.svg)](https://www.npmjs.com/package/gulp-debug-finder)
 [![Build Status](https://travis-ci.org/jwilsson/gulp-debug-finder.svg?branch=master)](https://travis-ci.org/jwilsson/gulp-debug-finder)
+[![Coverage Status](https://coveralls.io/repos/github/jwilsson/gulp-debug-finder/badge.svg?branch=master)](https://coveralls.io/github/jwilsson/gulp-debug-finder?branch=master)
 
 Make sure `console.log()` statements doesn't make it into production.
 
