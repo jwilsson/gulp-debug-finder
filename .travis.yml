@@ -15,5 +15,8 @@ before_script:
 script:
   - npm test
 
+after_script:
+  - npm run cover
+
 matrix:
   fast_finish: true
