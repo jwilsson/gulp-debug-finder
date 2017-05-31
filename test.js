@@ -21,8 +21,12 @@ test('warn with debug statements present', (t) => {
     stream.end();
 });
 
-test('ignores null files', () => {
+test('ignores null files', (t) => {
     const stream = debugFinder();
+
+    stream.on('data', (data) => {
+        t.is(data.contents, null);
+    });
 
     stream.write(new File({
         base: __dirname,
