@@ -1,8 +1,8 @@
 'use strict';
 
 const PluginError = require('plugin-error');
+const Readable = require('stream').Readable;
 const debugFinder = require('./');
-const Stream = require('stream');
 const File = require('vinyl');
 const path = require('path');
 const test = require('ava');
@@ -43,7 +43,7 @@ test('ignores streams', (t) => {
     t.throws(() => {
         stream.write(new File({
             base: __dirname,
-            contents: new Stream(),
+            contents: new Readable(),
             path: path.join(__dirname, '/file.js'),
         }));
     }, PluginError);

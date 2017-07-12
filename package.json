@@ -30,7 +30,7 @@
     "eslint": "^4.0.0",
     "eslint-config-jwilsson": "^2.0.1",
     "nyc": "^11.0.1",
-    "vinyl": "^1.1.1"
+    "vinyl": "^2.1.0"
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
